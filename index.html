@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juiceeee | 鲜榨创意</title>
+    <!-- 引入 Remix Icon 图标库 -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- 引入 AOS 动画库样式 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="ri-cup-line loader-icon"></i>
+            <span class="loader-text" data-i18n="preloader_txt">正在鲜榨...</span>
+        </div>
+    </div>
+
+    <!-- 语言切换器 -->
+    <div class="lang-switcher">
+        <div class="lang-icon"><i class="ri-global-line"></i></div>
+        <div class="lang-dropdown">
+            <div onclick="setLang('zh')">中文</div>
+            <div onclick="setLang('en')">English</div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">
+            <i class="ri-cup-line"></i> Juiceeee
+        </div>
+        <div class="nav-links">
+            <a href="#home" data-i18n="nav_home">首页</a>
+            <a href="#flavors" data-i18n="nav_flavors">特色</a>
+            <a href="#menu" data-i18n="nav_menu">作品</a>
+            <a href="#contact" data-i18n="nav_contact">联系</a>
+        </div>
+    </nav>
+
+    <!-- 浮动装饰 -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+
+    <!-- 首屏 Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+            <span class="hero-tag" data-i18n="hero_tag">2026 全新季</span>
+            <h1 data-i18n="hero_title">挤出每一天的<br>创造力。</h1>
+            <p data-i18n="hero_desc">像鲜榨果汁一样纯粹的设计，为您带来最清新的数字体验。每一滴灵感都来自 100% 的热情。</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn-main" onclick="document.querySelector('#menu').scrollIntoView({behavior: 'smooth'})" data-i18n="btn_view_menu">查看作品</button>
+                <div style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"><i class="ri-play-fill" style="color: var(--primary);"></i></div>
+                    <span style="font-weight: 700;" data-i18n="btn_watch_video">观看视频</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="juice-blob">
+                <i class="ri-orange-fill fruit-icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色板块 -->
+    <section class="section" id="flavors">
+        <div class="section-header" data-aos="fade-up">
+            <h2 data-i18n="flavors_title">我们的<span>新鲜</span>特色</h2>
+            <p data-i18n="flavors_desc">我们提供多种口味的数字服务，满足您的不同需求。</p>
+        </div>
+        
+        <div class="flavors-grid">
+            <div class="flavor-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="icon-box"><i class="ri-layout-masonry-line"></i></div>
+                <h3 data-i18n="flavor_ux_title">UI/UX 设计</h3>
+                <p data-i18n="flavor_ux_desc">精心调配的界面布局，如同热带水果拼盘般丰富多彩，注重用户体验的每一处细节。</p>
+            </div>
+            <div class="flavor-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon-box"><i class="ri-code-s-slash-line"></i></div>
+                <h3 data-i18n="flavor_web_title">Web 开发</h3>
+                <p data-i18n="flavor_web_desc">清洁高效的代码结构，保证网站运行如同冰镇果汁般流畅爽滑。</p>
+            </div>
+            <div class="flavor-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box"><i class="ri-camera-lens-line"></i></div>
+                <h3 data-i18n="flavor_photo_title">摄影</h3>
+                <p data-i18n="flavor_photo_desc">捕捉光影的瞬间，保留最真实鲜活的色彩，为您呈现高保真的视觉盛宴。</p>
+            </div>
+            <div class="flavor-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box"><i class="ri-rocket-line"></i></div>
+                <h3 data-i18n="flavor_brand_title">品牌构建</h3>
+                <p data-i18n="flavor_brand_desc">从 Logo 到完整的品牌视觉识别，打造独一无二的品牌果香。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集/菜单 -->
+    <section class="section" id="menu" style="background-color: #fff;">
+        <div class="section-header" data-aos="fade-up">
+            <h2 data-i18n="menu_title">当季<span>作品</span></h2>
+            <p data-i18n="menu_desc">查看我们要最新鲜出炉的作品。</p>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-item" data-aos="zoom-in">
+                <img src="images/work1.jpg" 
+                     data-src-online="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Summer Vibes" 
+                     onerror="handleImageError(this)">
+                <div class="menu-overlay">
+                    <h3 data-i18n="menu_work1">夏日风情</h3>
+                    <p data-i18n="menu_app">App 设计</p>
+                </div>
+            </div>
+            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/work2.jpg" 
+                     data-src-online="https://images.unsplash.com/photo-1546173159-315724a31696?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Fresh Orange" 
+                     onerror="handleImageError(this)">
+                <div class="menu-overlay">
+                    <h3 data-i18n="menu_work2">鲜橙</h3>
+                    <p data-i18n="menu_brand">品牌设计</p>
+                </div>
+            </div>
+            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
+                <img src="images/work3.jpg" 
+                     data-src-online="https://images.unsplash.com/photo-1596230554999-514d57c7c1cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Berry Mix" 
+                     onerror="handleImageError(this)">
+                <div class="menu-overlay">
+                    <h3 data-i18n="menu_work3">混合浆果</h3>
+                    <p data-i18n="menu_illu">插画</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅/联系 -->
+    <div class="newsletter" id="contact" data-aos="flip-up">
+        <h2 data-i18n="news_title">保持新鲜 & 获取更新</h2>
+        <p data-i18n="news_desc">订阅我们的周报，获取最新的设计趋势和果汁配方。</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('暂未开通！');">
+            <input type="email" placeholder="输入您的邮箱..." data-i18n="placeholder_email">
+            <button class="btn-main" data-i18n="btn_subscribe">立即订阅</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
+            Juiceeee
+        </div>
+        <div class="social-links">
+            <a href="javascript:void(0)" onclick="navigateToSocial('bilibili')"><i class="ri-bilibili-line"></i></a>
+            <a href="javascript:void(0)" onclick="navigateToSocial('github')"><i class="ri-github-line"></i></a>
+            <a href="javascript:void(0)" onclick="navigateToSocial('weibo')"><i class="ri-weibo-line"></i></a>
+        </div>
+        <p style="color: var(--text-light); font-size: 0.9rem;" data-i18n="footer_rights">&copy; 2026 Juiceeee Design. 保留所有权利。</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
