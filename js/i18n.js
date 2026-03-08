@@ -22,8 +22,10 @@ const translations = {
         'flavor_web_desc': '清洁高效的代码结构，保证网站运行如同冰镇果汁般流畅爽滑。',
         'flavor_photo_title': '摄影',
         'flavor_photo_desc': '捕捉光影的瞬间，保留最真实鲜活的色彩，为您呈现高保真的视觉盛宴。',
-        'flavor_brand_title': '品牌构建',
-        'flavor_brand_desc': '从 Logo 到完整的品牌视觉识别，打造独一无二的品牌果香。',
+        'flavor_run_title': '熊大快跑',
+        'flavor_run_desc': '刺激的跑酷游戏，化身熊大躲避障碍，收集金币，看看你能跑多远！',
+        'run_game_time': '生存时间',
+        'run_game_score': '分数',
         'menu_title': '当季<span>作品</span>',
         'menu_desc': '查看我们要最新鲜出炉的作品。',
         'menu_work1': '原神',
@@ -38,7 +40,7 @@ const translations = {
         'news_desc': '订阅我们的周报，获取最新的设计趋势和果汁配方。',
         'placeholder_email': '输入您的邮箱...',
         'btn_subscribe': '立即订阅',
-        'footer_rights': '&copy; 2026 Juiceeee Design. 保留所有权利。',
+        'footer_rights': '&copy; 2026 Juiceeee Design. 不保留所有权利。',
         'preloader_txt': '正在鲜榨...'
     },
     'en': {
@@ -64,8 +66,10 @@ const translations = {
         'flavor_web_desc': 'Clean and efficient code, ensuring your website runs as smooth as iced juice.',
         'flavor_photo_title': 'Photography',
         'flavor_photo_desc': 'Capturing light and shadow to retain the truest vivid colors for a visual feast.',
-        'flavor_brand_title': 'Branding',
-        'flavor_brand_desc': 'From logos to complete brand identity, building a unique fruit aroma.',
+        'flavor_run_title': 'Xiong Da Run',
+        'flavor_run_desc': 'Exciting parkour game! Play as Xiong Da, dodge obstacles, collect coins, and see how far you can run!',
+        'run_game_time': 'Time',
+        'run_game_score': 'Score',
         'menu_title': 'Seasonal <span>Menu</span>',
         'menu_desc': 'Check out our freshly squeezed works.',
         'menu_work1': 'Genshin Impact',
@@ -80,7 +84,7 @@ const translations = {
         'news_desc': 'Subscribe to our newsletter for the latest design trends and juice recipes.',
         'placeholder_email': 'Enter your email...',
         'btn_subscribe': 'Subscribe Now',
-        'footer_rights': '&copy; 2026 Juiceeee Design. All rights reserved.',
+        'footer_rights': '&copy; 2026 Juiceeee Design. No rights reserved.',
         'preloader_txt': 'Squeezing...'
     }
 };

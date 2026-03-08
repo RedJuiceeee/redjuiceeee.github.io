@@ -55,13 +55,13 @@ function navigateToSocial(platform) {
     let url = '';
     switch(platform) {
         case 'bilibili':
-            url = 'https://www.bilibili.com/'; 
+            url = 'https://space.bilibili.com/1438315583?spm_id_from=333.1007.0.0'; 
             break;
         case 'github':
-            url = 'https://github.com/';
+            url = 'https://github.com/RedJuiceeee/';
             break;
-        case 'weibo':
-            url = 'https://weibo.com/'; 
+        case 'xiaoheihe':
+            url = 'https://www.xiaoheihe.cn/app/user/profile/64266507'; 
             break;
         default:
             return;

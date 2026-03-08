@@ -96,10 +96,10 @@
                 <h3 data-i18n="flavor_photo_title">摄影</h3>
                 <p data-i18n="flavor_photo_desc">捕捉光影的瞬间，保留最真实鲜活的色彩，为您呈现高保真的视觉盛宴。</p>
             </div>
-            <div class="flavor-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box"><i class="ri-rocket-line"></i></div>
-                <h3 data-i18n="flavor_brand_title">品牌构建</h3>
-                <p data-i18n="flavor_brand_desc">从 Logo 到完整的品牌视觉识别，打造独一无二的品牌果香。</p>
+            <div class="flavor-card" data-aos="fade-up" data-aos-delay="300" onclick="openRunGameModal()" style="cursor: pointer;">
+                <div class="icon-box"><i class="ri-run-line"></i></div>
+                <h3 data-i18n="flavor_run_title">熊大快跑</h3>
+                <p data-i18n="flavor_run_desc">刺激的跑酷游戏，化身熊大躲避障碍，收集金币，看看你能跑多远！</p>
             </div>
         </div>
     </section>
@@ -173,9 +173,9 @@
         <div class="social-links">
             <a href="javascript:void(0)" onclick="navigateToSocial('bilibili')"><i class="ri-bilibili-line"></i></a>
             <a href="javascript:void(0)" onclick="navigateToSocial('github')"><i class="ri-github-line"></i></a>
-            <a href="javascript:void(0)" onclick="navigateToSocial('weibo')"><i class="ri-weibo-line"></i></a>
+            <a href="javascript:void(0)" onclick="navigateToSocial('xiaoheihe')"><i class="ri-gamepad-line"></i></a>
         </div>
-        <p style="color: var(--text-light); font-size: 0.9rem;" data-i18n="footer_rights">&copy; 2026 Juiceeee Design. 保留所有权利。</p>
+        <p style="color: var(--text-light); font-size: 0.9rem;" data-i18n="footer_rights">&copy; 2026 Juiceeee Design. 不保留所有权利。</p>
     </footer>
 
     <!-- Game Modal -->
@@ -200,11 +200,34 @@
         </div>
     </div>
 
+    <!-- Run Game Modal -->
+    <div id="runGameModal" class="game-modal" style="display: none;">
+        <div class="game-modal-content">
+            <span class="game-modal-close" onclick="closeRunGameModal()">&times;</span>
+            <div class="game-header">
+                <div class="game-timer"><span data-i18n="run_game_time">时间</span>: <span id="runGameTimerView">0</span>s</div>
+                <div class="game-score"><span data-i18n="run_game_score">分数</span>: <span id="runGameScoreView">0</span></div>
+            </div>
+            <div class="game-body" id="runGameBody" style="position: relative; display: flex; justify-content: center; background-color: #87CEEB;">
+                <canvas id="runGameCanvas" width="400" height="500"></canvas>
+            </div>
+            <div class="run-game-controls" style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="btn-main" style="flex: 1; font-size: 24px; padding: 5px; height: 50px; display: flex; justify-content: center; align-items: center;" onclick="moveRunPlayerLeft()"><i class="ri-arrow-left-line"></i></button>
+                <button class="btn-main" style="flex: 1; font-size: 24px; padding: 5px; height: 50px; display: flex; justify-content: center; align-items: center;" onclick="moveRunPlayerRight()"><i class="ri-arrow-right-line"></i></button>
+            </div>
+            <div class="game-footer">
+                <button class="btn-main" onclick="resetRunGame()" data-i18n="btn_game_reset">重置游戏</button>
+                <button class="btn-main" onclick="startRunGame()" id="startRunGameBtn" data-i18n="btn_game_start">开始游戏</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Matter.js included for physics engine -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
     <script src="js/daxigua.js"></script>
+    <script src="js/xiongdakupao.js"></script>
 </body>
 </html>
