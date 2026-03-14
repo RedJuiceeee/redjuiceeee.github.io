@@ -91,7 +91,7 @@
                 <h3 data-i18n="flavor_web_title">Web 开发</h3>
                 <p data-i18n="flavor_web_desc">清洁高效的代码结构，保证网站运行如同冰镇果汁般流畅爽滑。</p>
             </div>
-            <div class="flavor-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flavor-card" data-aos="fade-up" data-aos-delay="200" onclick="openPhotoModal()" style="cursor: pointer;">
                 <div class="icon-box"><i class="ri-camera-lens-line"></i></div>
                 <h3 data-i18n="flavor_photo_title">摄影</h3>
                 <p data-i18n="flavor_photo_desc">捕捉光影的瞬间，保留最真实鲜活的色彩，为您呈现高保真的视觉盛宴。</p>
@@ -222,12 +222,27 @@
         </div>
     </div>
 
+    <!-- Photo Modal -->
+    <div id="photoModal" class="game-modal" style="display: none;">
+        <div class="game-modal-content" style="max-width: 800px; width: 90%; max-height: 80vh; overflow-y: auto;">
+            <span class="game-modal-close" onclick="closePhotoModal()">&times;</span>
+            <div class="game-header">
+                <div class="game-score"><span data-i18n="flavor_photo_title">摄影</span></div>
+            </div>
+            <div class="game-body" id="photoGallery" style="background: none; border: none; overflow: visible;">
+                <!-- Images insert here -->
+            </div>
+        </div>
+    </div>
+
     <!-- Matter.js included for physics engine -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/photography_data.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
     <script src="js/daxigua.js"></script>
     <script src="js/xiongdakupao.js"></script>
+    <script src="js/photography.js"></script>
 </body>
 </html>
